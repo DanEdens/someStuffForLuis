@@ -2,14 +2,14 @@ import argparse
 import os
 import sys
 
-import devices
+# import devices
 
 parent = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, parent)
 
 parser = argparse.ArgumentParser(
-        description="Command and Control hub for CDRouter Testing",
-        prog='MinimTestKit.CDRouter',
+        description="useage: python main.py --device randomname --package randompackage --tests randomtests",
+        prog='someStuffForLuis',
         formatter_class=argparse.RawDescriptionHelpFormatter
         )
 
@@ -32,7 +32,7 @@ parser.add_argument(
         # '-t',
         '--tests',
         default=os.environ.get("cdrouter_tests", 'cdrouter'),
-        choices=devices.testList,
+        # choices=devices.testList,
         help='The name of the file containing a list of tests that define the package'
         )
 
@@ -40,7 +40,7 @@ parser.add_argument(
         # '-d',
         '--device',
         default=os.environ.get("cdrouter_device", 'cdrouter'),
-        choices=devices.deviceList,
+        # choices=devices.deviceList,
         help='The name of the device under test'
         )
 
