@@ -84,7 +84,6 @@ parser.add_argument(
         )
 
 args = parser.parse_args()
-print("Runtime parameters: " + args)
 
 # Jenkins parameter Boolean conversions
 if args.skipcleanup == 'false':
